@@ -1,267 +1,166 @@
-/* A simple css reset */
-body,
-Html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    /* The Font Family- Really important!! */
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+/* ==========================================
+   PART 1 - STYLE.CSS
+   Pastel Kawaii Scrapbook
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
-img {
-    width: 100%;
-}
-@font-face {
-    font-family: "Gojiberry";
-    src: url("fonts/Gojiberry%20Quibble%20Free.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-.cover-title{
-
-    font-family:"Gojiberry", cursive;
-    font-size:72px;
-    color:#ff4f97;
-
-}
-/* The hero section styling- use your OWN Hero Image URL here */
-.hero {
-    background-image: url('images/techquitybanner-1130x160.png');
-    height: 25vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
+html{
+    scroll-behavior:smooth;
 }
 
-/* BIG text styling for the hero section text */
-.hero-text {
-    font-size: 4em;
-    font-weight: bold;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(#fff8fc,#ffeff6);
+    overflow-x:hidden;
 }
 
-/* nice big font on a banner style background */
-.topic-title{
-    color: white;
-    font-size: 2em;
-    padding: 0.1em 3em;
-    background-color: rgb(71, 71, 71);
+/* ---------- Images ---------- */
+
+img{
+    display:block;
+    max-width:100%;
 }
 
-/* Three column grid with a nice big gap */
-.topic-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
-    /* bring the whole section in off the sides of the page */
-    width: 70%;
-    /* top margin of 3em and center right/left */
-    margin: 3em auto;
+/* ---------- Font ---------- */
+
+@font-face{
+    font-family:"Gojiberry";
+    src:url("fonts/Gojiberry%20Quibble%20Free.ttf") format("truetype");
 }
 
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
-    background-color: rgb(71, 71, 71);
-    color: white;
-    padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
+/* ---------- Hero ---------- */
 
-/* Styling for the topic card titles */
-.topic-card-text{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    /* center align text */
-    text-align: center;
-}
+.hero{
 
+    height:25vh;
 
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
-    background-color: rgb(71, 71, 71);
-    color: white;
-    text-align: right;
-    padding: 3em 3em;
-}
-.book-scene{
-    display:flex;
-    justify-content:center;
-    margin:80px auto;
-}
+    background:url("images/banner.png") no-repeat;
 
-.cover{
+    background-size:cover;
 
-    width:500px;
-    height:650px;
-
-    background:linear-gradient(
-    180deg,
-    #ffd6ea,
-    #ffc3df);
-
-    border-radius:20px;
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.25);
-
-    cursor:pointer;
+    background-position:center;
 
     display:flex;
-    flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
 
-    transition:.5s;
-
-    border:10px solid #ffeef7;
 }
 
-.cover:hover{
+.hero-text{
 
-    transform:scale(1.03) rotate(-2deg);
+    color:white;
 
-}
-
-.cover-title{
-
-    font-size:55px;
-
-    color:#ff5fa2;
-
-    font-family:"Comic Sans MS", cursive;
+    font-size:65px;
 
     font-weight:bold;
 
-}
-
-.cover-subtitle{
-
-    margin-top:25px;
-
-    color:#ffffff;
-
-    font-size:22px;
+    text-shadow:
+    0 5px 12px rgba(0,0,0,.35);
 
 }
 
-.cover-click{
+/* =====================================
+            BOOK SECTION
+===================================== */
 
-    margin-top:100px;
-
-    background:white;
-
-    color:#ff6fb0;
-
-    padding:14px 28px;
-
-    border-radius:999px;
-
-    font-weight:bold;
-
-}
-
-.hidden{
-
-    display:none;
-
-}
-
-#flipbook{
-
-    width:900px;
-    height:600px;
-
-}
-
-.page{
-
-    background:#fff7fb;
-
-}
-
-.page img{
-
-    width:100%;
-    height:100%;
-    object-fit:contain;
-
-}
 .book-cover{
 
     display:flex;
+
     justify-content:center;
-    margin:80px auto;
+
+    align-items:center;
+
+    padding:80px 0 120px;
 
 }
+
+/* =====================================
+            SCRAPBOOK
+===================================== */
 
 .fabric{
 
     position:relative;
 
-    width:520px;
-    height:700px;
+width:500px;
+height:700px;
 
-    background:#f8c8dc;
-
-    border-radius:28px;
-
-    border:12px solid #ffeaf3;
+    border-radius:38px;
 
     overflow:hidden;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    background:#f7bfd3;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.18);
+
+    border:10px solid #ffeaf4;
+
+    outline:5px dashed white;
+
+    outline-offset:-18px;
 
 }
+
+/* fabric texture */
+
 .fabric::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:
+    background:
 
-linear-gradient(45deg,
-transparent 47%,
-rgba(255,255,255,.18) 49%,
-transparent 51%),
+    linear-gradient(
+    45deg,
+    rgba(255,255,255,.10) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,.10) 50%,
+    rgba(255,255,255,.10) 75%,
+    transparent 75%);
 
-linear-gradient(-45deg,
-transparent 47%,
-rgba(255,255,255,.18) 49%,
-transparent 51%);
+    background-size:60px 60px;
 
-background-size:90px 90px;
-
-opacity:.6;
+    opacity:.45;
 
 }
+
+/* pink glow */
+
 .fabric::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-top:12px;
-left:12px;
-right:12px;
-bottom:12px;
+    inset:0;
 
-border:4px dashed white;
+    background:
 
-border-radius:18px;
+    radial-gradient(circle at top,
+    rgba(255,255,255,.35),
+    transparent 55%);
 
-pointer-events:none;
+    pointer-events:none;
 
 }
+
+/* =====================================
+            SPINE
+===================================== */
+
 .spine{
 
 position:absolute;
@@ -285,302 +184,383 @@ inset -8px 0 rgba(255,255,255,.4),
 8px 0 15px rgba(0,0,0,.15);
 
 }
+
+/* =====================================
+             BOW
+===================================== */
+
+.corner-bow{
+    position:absolute;
+    width: 200px;
+    top:-5px;
+    left:0px;
+    z-index:100;
+}
+/* =====================================
+             TITLE
+===================================== */
+
 h1{
+    font-family:"Gojiberry", cursive;
+    font-size:72px;
+    color:#ff6ca9;
+    text-align:center;
 
-font-family:"Gojiberry";
+position:relative;
+left:35px;
+margin-top:250px;
 
-font-size:72px;
+    line-height:1.05;
 
-color:#ff5ea6;
-
-margin-top:170px;
-
-text-align:center;
-
-text-shadow:
-
-3px 3px white,
-
-0 0 18px rgba(255,255,255,.8);
-
+    text-shadow:
+        3px 3px #fff,
+        0 0 10px rgba(255,255,255,.8);
 }
 
-p{
-
-text-align:center;
-
-font-size:24px;
-
-color:white;
-
-font-weight:bold;
-
+.subtitle{
+    color:#ff76af;
+    font-size:17px;
+    font-weight:bold;
+margin-top:25px;
+line-height:1.5;
+    text-align:center;
+    position:relative;
+left:35px;
 }
+
+/* =====================================
+            BUTTON
+===================================== */
+
 .open-book{
 
-display:block;
+    display:block;
 
-width:230px;
+    width: 210px;
+    height:58px;
 
-margin:70px auto;
+    line-height:58px;
 
-padding:18px;
+  margin:70px auto;
 
-text-align:center;
+    background:white;
 
-background:white;
+    border-radius:999px;
 
-border-radius:999px;
+    text-align:center;
 
-text-decoration:none;
+    text-decoration:none;
 
-font-weight:bold;
+    font-family:"Gojiberry", cursive;
 
-color:#ff66aa;
+    font-size:28px;
 
-font-size:22px;
+    color:#ff6ca9;
 
-transition:.3s;
+    box-shadow:0 6px 16px rgba(255,170,205,.35);
 
+    transition:.25s;
+    position:relative;
+left:35px;
 }
 
 .open-book:hover{
-
-transform:scale(1.08);
-
+    transform:scale(1.05);
 }
+/* ==========================================
+   PART 2 - STYLE.CSS
+   Stickers, Footer & Finishing Touches
+========================================== */
+
+/* ===========================
+        STICKERS
+=========================== */
+
 .sticker{
-
-position:absolute;
-
-font-size:45px;
-
-filter:drop-shadow(0 5px 6px rgba(0,0,0,.15));
-
-}
-
-.heart{
-top:40px;
-right:50px;
-transform:rotate(15deg);
-}
-
-.bunny{
-top:80px;
-left:100px;
-}
-
-.flower{
-bottom:80px;
-right:80px;
-}
-
-.bear{
-bottom:140px;
-left:80px;
-}
-
-.bow{
-top:270px;
-left:45px;
-}
-
-.star{
-top:320px;
-right:70px;
-}
-
-.strawberry{
-bottom:35px;
-right:180px;
-}
-.corner-bow{
-
     position:absolute;
+    height:auto;
+    z-index:20;
+    filter:drop-shadow(0 8px 10px rgba(0,0,0,.18));
+}
 
-    top:-18px;
-    left:-18px;
+.drink{
+    width:135px;
+    top:55px;
+    right:35px;
+}
 
+.cherry{
+    width:125px;
+    top:390px;
+    left:155px;
+}
+
+.flowers{
     width:150px;
-
-    transform:rotate(-12deg);
-
-    z-index:100;
-
-    pointer-events:none;
-
-}
-.top-border{
-
-    position:absolute;
-
-    top:-6px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:104%;
-
-    z-index:100;
-
-    pointer-events:none;
-
-}
-.subtitle{
-
-font-size:24px;
-
-color:white;
-
-margin-top:-15px;
-
-font-weight:bold;
-
-letter-spacing:1px;
-
-}
-.washi{
-
-position:absolute;
-
-width:100px;
-
-height:35px;
-
-background:rgba(255,255,255,.55);
-
-transform:rotate(-15deg);
-
+    bottom:105px;
+    right:65px;
 }
 
-.left{
-
-top:130px;
-
-left:80px;
-
+.cake{
+    width:120px;
+    bottom:35px;
+    left:20px;
 }
-
-.right{
-
-top:130px;
-
-right:60px;
-
-transform:rotate(15deg);
-
-}
-.bookmark{
-
-position:absolute;
-
-right:55px;
-
-top:0;
-
-width:22px;
-
-height:130px;
-
-background:#ff5ea6;
-
-border-radius:0 0 12px 12px;
-
-}
-
-.bookmark::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-18px;
-
-left:0;
-
-border-left:11px solid transparent;
-
-border-right:11px solid transparent;
-
-border-top:18px solid #ff5ea6;
-
-}
-.bottom-border{
-
-    position:absolute;
-
-    bottom:-6px;
-
-    left:50%;
-
-    transform:translateX(-50%) rotate(180deg);
-
-    width:104%;
-
-    z-index:100;
-
-    pointer-events:none;
-
-}
-.bunny{
-
-top:110px;
-left:120px;
-
-}
-
-.bear{
-
-bottom:90px;
-left:90px;
-
-}
-
-.flower{
-
-bottom:120px;
-right:90px;
-
-}
-
-.strawberry{
-
-top:250px;
-right:60px;
-
-}
+/* ===========================
+     DECORATIVE SPARKLES
+=========================== */
 
 .sparkle{
 
-top:350px;
-right:120px;
+    position:absolute;
 
-font-size:40px;
+    color:white;
 
-}
-.open-book{
-
-background:white;
-
-padding:18px 40px;
-
-border-radius:50px;
-
-color:#ff5ea6;
-
-font-weight:bold;
-
-box-shadow:
-
-0 8px 18px rgba(255,120,180,.3);
-
-transition:.25s;
+    text-shadow:
+    0 0 10px white;
 
 }
+
+.sparkle1{
+    top:120px;
+    left:140px;
+    font-size:26px;
+}
+
+.sparkle2{
+    top:260px;
+    right:110px;
+    font-size:26px;
+}
+
+.sparkle3{
+    bottom:170px;
+    left:180px;
+    font-size:28px;
+}
+
+.sparkle4{
+    bottom:130px;
+    right:150px;
+    font-size:26px;
+}
+
+/* ===========================
+      LITTLE HEARTS
+=========================== */
+
+.heart{
+
+    position:absolute;
+
+    color:#ffd8ea;
+
+    font-size:22px;
+
+    opacity:.8;
+
+}
+
+.heart1{
+
+    top:185px;
+
+    left:105px;
+
+    transform:rotate(-15deg);
+
+}
+
+.heart2{
+
+    top:205px;
+
+    right:115px;
+
+    transform:rotate(15deg);
+
+}
+
+.heart3{
+
+    bottom:185px;
+
+    right:135px;
+
+}
+
+.heart4{
+
+    bottom:135px;
+
+    left:120px;
+
+}
+
+/* ===========================
+       FABRIC SHINE
+=========================== */
+
+.fabric-shine{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+    125deg,
+    transparent 35%,
+    rgba(255,255,255,.22) 48%,
+    transparent 60%);
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+      OPEN BUTTON HOVER
+=========================== */
 
 .open-book:hover{
 
-transform:translateY(-4px) scale(1.05);
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+
+    0 14px 28px rgba(255,175,215,.45);
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+.footer{
+
+    margin-top:80px;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:#ffdceb;
+
+    color:#ff6da8;
+
+    font-family:"Gojiberry";
+
+    font-size:24px;
+
+}
+
+/* ===========================
+      MOBILE SUPPORT
+=========================== */
+
+@media(max-width:650px){
+
+.hero-text{
+
+    font-size:42px;
+
+}
+
+.fabric{
+
+    width:340px;
+
+    height:500px;
+
+}
+
+.spine{
+
+    width:34px;
+
+    height:464px;
+
+}
+
+.fabric h1{
+
+    font-size:46px;
+
+    margin-top:70px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+}
+
+.open-book{
+
+    width:220px;
+
+    font-size:22px;
+
+    padding:11px 0;
+
+}
+
+/* Stickers */
+
+.cherry{
+    width:68px;
+}
+
+.drink{
+    width:80px;
+}
+
+.flowers{
+    width:85px;
+}
+
+.cake{
+    width:88px;
+}
+
+.corner-bow{
+
+    width:115px;
+
+}
+
+}
+
+/* ===========================
+      EXTRA POLISH
+=========================== */
+
+.fabric{
+
+    animation:floatBook 5s ease-in-out infinite;
+
+}
+
+@keyframes floatBook{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
 
 }
