@@ -1,7 +1,3 @@
-/* ==========================================
-   PART 1 - STYLE.CSS
-   Pastel Kawaii Scrapbook
-========================================== */
 
 *{
     margin:0;
@@ -53,18 +49,6 @@ img{
 
 }
 
-.hero-text{
-
-    color:white;
-
-    font-size:65px;
-
-    font-weight:bold;
-
-    text-shadow:
-    0 5px 12px rgba(0,0,0,.35);
-
-}
 
 /* =====================================
             BOOK SECTION
