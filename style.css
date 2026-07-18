@@ -932,9 +932,9 @@ background-size:1000px auto;
     color:#d979a4;
 }
 .main-envelope{
-    width:420px;
+    width:650px;
     cursor:pointer;
-    transition:.3s;
+    transition:.35s;
 }
 
 .main-envelope:hover{
@@ -942,7 +942,7 @@ background-size:1000px auto;
 }
 body{
 
-    background:url("images/paper.g");
+    background:url("images/background.png");
     background-size:cover;
 }
 
@@ -999,9 +999,9 @@ h1{
     display:flex;
     justify-content:center;
 
-    margin-top:-120px;   /* move closer to the I Love You page */
-
+    margin-top:-80px;
     margin-bottom:80px;
+
 }
 .main-envelope{
 
@@ -1018,5 +1018,18 @@ h1{
         translateY(-10px)
         rotate(-2deg)
         scale(1.05);
+
+}
+body{
+
+    background:url("images/background.png");
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+    background-position:center;
+
+    overflow-x:hidden;
 
 }
