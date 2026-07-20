@@ -9,11 +9,6 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(#fff8fc,#ffeff6);
-    overflow-x:hidden;
-}
 
 /* ---------- Images ---------- */
 
@@ -257,13 +252,6 @@ transform:translate(-50%,-8px) rotate(0deg) scale(1.08);
 
 }
 
-
-/* ==========================================
-   PART 2 - STYLE.CSS
-   Stickers, Footer & Finishing Touches
-========================================== */
-
-
 /* ===========================
      DECORATIVE SPARKLES
 =========================== */
@@ -413,9 +401,9 @@ transform:translate(-50%,-8px) rotate(0deg) scale(1.08);
 
     text-align:center;
 
-    background:#ffdceb;
+    background:#ffd6dd;
 
-    color:#ff6da8;
+    color:#f09abc;
 
     font-family:"Gojiberry";
 
@@ -732,7 +720,7 @@ scale(1.2);
     width:1200px;
     height:900px;
 
-    margin:-450px auto 40px; /* centers it */
+    margin:40px auto 40px; /* centers it */
 
     flex-shrink:0;
 }
@@ -940,11 +928,7 @@ background-size:1000px auto;
 .main-envelope:hover{
     transform:translateY(-10px) rotate(-2deg) scale(1.04);
 }
-body{
 
-    background:url("images/background.png");
-    background-size:cover;
-}
 
 h1{
 
@@ -1020,16 +1004,22 @@ h1{
         scale(1.05);
 
 }
+/* Default background (index) */
 body{
-
-    background:url("images/background.png");
-
-    background-size:cover;
-
-    background-attachment:fixed;
-
-    background-position:center;
-
     overflow-x:hidden;
 
+    background:url("images/background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/* Letters page only */
+body.letters-page{
+    background:url("images/background1.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
