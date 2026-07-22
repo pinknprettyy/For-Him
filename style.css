@@ -1099,7 +1099,16 @@ body.letters-page{
 
     text-align:left;
 }
+.letter-text p{
+    margin-bottom:28px;
+}
 
+.special-lines{
+    text-align:center;
+    line-height:2.4;
+    font-size:26px;
+    margin:40px 0;
+}
 
 /* Scrollbar */
 
@@ -1473,4 +1482,16 @@ body.letters-page{
 
     border:none;
     box-shadow:none;
+}
+.song-title{
+    font-size:30px;
+    text-align:center;
+
+    margin-top:45px;
+    margin-bottom:15px;
+
+    color:#ff9fc8;
+
+    text-shadow:
+        0 0 8px rgba(255,180,220,.4);
 }
