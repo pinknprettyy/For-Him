@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Our Memories ♡</title>
+</head>
+
+<body class="gallery-page">
+
+<div class="gallery-wrapper">
+
+    <!-- Title -->
+<img src="images/ourmemories.png" class="memory-label">
+
+    <!-- Floating decorations -->
+    <div class="gallery-heart heart-a">♡</div>
+    <div class="gallery-heart heart-b">♡</div>
+    <div class="gallery-star star-a">✦</div>
+    <div class="gallery-star star-b">✦</div>
+
+    <!-- Polaroid frame -->
+    <div class="polaroid-frame">
+
+<div class="gallery">
+
+<img src="images/open-book.png" class="book">
+
+<div class="polaroid-left">
+
+<img src="images/polaroid.png">
+
+<img id="leftPhoto" class="photo">
+
+</div>
+
+<div class="polaroid-right">
+
+<img src="images/polaroid.png">
+
+<img id="rightPhoto" class="photo">
+
+</div>
+
+<button class="arrow left" onclick="previousPhoto()">❮</button>
+
+<button class="arrow right" onclick="nextPhoto()">❯</button>
+
+</div>
+
+<p id="photoCaption" class="photo-caption"></p>
+<div class="gallery">
+
+    <img src="images/open-book.png" class="book">
+
+    <button class="arrow left">&#10094;</button>
+
+    <div class="polaroid">
+
+        <img id="photo" src="images/photo1.jpg">
+
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+
+</div>
+    <!-- Buttons -->
+    <div class="gallery-controls">
+        <button onclick="prevPhoto()" class="gallery-btn">←</button>
+        <button onclick="nextPhoto()" class="gallery-btn">→</button>
+    </div>
+
+    <p id="photoCaption" class="photo-caption">Our first favorite photo ♡</p>
+
+</div>
+
+<script>
+const photos = [
+    {
+        src: 'images/photo1.jpg',
+        caption: 'Our first favorite photo ♡'
+    },
+    {
+        src: 'images/photo2.jpg',
+        caption: 'The day I smiled the hardest ✦'
+    },
+    {
+        src: 'images/photo3.jpg',
+        caption: 'A memory I never want to forget ♡'
+    },
+    {
+        src: 'images/photo4.jpg',
+        caption: 'You + me forever 💗'
+    }
+];
+
+let current = 0;
+
+function showPhoto(index){
+    document.getElementById('galleryPhoto').src = photos[index].src;
+    document.getElementById('photoCaption').textContent = photos[index].caption;
+}
+
+function nextPhoto(){
+    current = (current + 1) % photos.length;
+    showPhoto(current);
+}
+
+function prevPhoto(){
+    current = (current - 1 + photos.length) % photos.length;
+    showPhoto(current);
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

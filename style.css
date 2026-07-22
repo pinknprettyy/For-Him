@@ -1014,3 +1014,463 @@ body.letters-page{
     background-repeat:no-repeat;
     background-attachment:fixed;
 }
+/* ===========================
+      LETTER PAGES
+=========================== */
+
+.letter-page{
+
+    margin:0;
+
+    background:url("images/background2.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* Main container */
+
+.letter-container{
+
+    width:1000px;
+
+    text-align:center;
+}
+
+
+/* Heading */
+
+.letter-title{
+
+    font-family:"Gojiberry";
+    font-size:56px;
+
+    color:#ffbeda;
+
+    margin-bottom:35px;
+
+    text-shadow:
+        0 3px 8px rgba(255, 210, 231, 0.8);
+}
+
+
+/* Pink paper */
+
+.letter-box{
+
+    width:100%;
+    height:700px;
+
+    background:rgba(255,241,247,.92);
+
+    border:6px solid #ffd5e7;
+
+    border-radius:35px;
+
+    box-shadow:
+        0 18px 40px rgba(255,185,215,.35);
+
+    padding:55px;
+
+    box-sizing:border-box;
+
+    overflow-y:auto;
+}
+
+
+/* Text */
+
+.letter-text{
+
+    font-family:"Gojiberry";
+
+    color:#ffbdda;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    text-align:left;
+}
+
+
+/* Scrollbar */
+
+.letter-box::-webkit-scrollbar{
+
+    width:10px;
+}
+
+.letter-box::-webkit-scrollbar-thumb{
+
+    background:#ffbfd8;
+    border-radius:999px;
+}
+
+.letter-box::-webkit-scrollbar-track{
+
+    background:#fff3f8;
+}
+.letter-decor{
+
+    font-size:34px;
+
+    color:#fcb8d4;
+
+    margin-bottom:18px;
+
+    animation:floatDecor 3s ease-in-out infinite;
+}
+
+@keyframes floatDecor{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+/* ==========================================
+   GALLERY PAGE
+========================================== */
+
+.gallery-page{
+    min-height:100vh;
+
+    background:url('images/background3.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.gallery-wrapper{
+    position:relative;
+    text-align:center;
+}
+
+/* Title */
+
+.gallery-title{
+    font-family:'Gojiberry';
+    font-size:64px;
+    color:#d978a2;
+    margin-bottom:10px;
+
+    text-shadow:0 4px 10px rgba(255,255,255,.8);
+}
+
+.gallery-subtitle{
+    font-family:'Gojiberry';
+    color:#e58bb3;
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+/* Polaroid */
+
+.polaroid-frame{
+    position:relative;
+
+    width:560px;
+    height:760px;
+
+    margin:0 auto;
+
+    animation:floatPolaroid 5s ease-in-out infinite;
+}
+
+.polaroid-base{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.12));
+}
+
+/* THIS IS THE PHOTO INSIDE THE FRAME */
+
+.polaroid-photo{
+    position:absolute;
+
+    top:170px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:365px;
+    height:435px;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+    transition:all .35s ease;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+/* Buttons */
+
+.gallery-controls{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:22px;
+}
+
+.gallery-btn{
+    width:72px;
+    height:72px;
+
+    border:none;
+    border-radius:999px;
+
+    color:#ff8ab8;
+    font-size:32px;
+    cursor:pointer;
+
+    box-shadow:0 8px 18px rgba(255,180,215,.35);
+
+    transition:.25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.gallery-btn:hover{
+    transform:translateY(-6px) scale(1.08) rotate(-3deg);
+
+    box-shadow:0 16px 28px rgba(255,180,215,.45);
+}
+
+.gallery-btn:active{
+    transform:scale(.92);
+}
+
+/* Caption */
+
+.photo-caption{
+    margin-top:18px;
+
+    font-family:'Gojiberry';
+    font-size:24px;
+    color:#d978a2;
+}
+
+/* Floating decorations */
+
+.gallery-heart,
+.gallery-star{
+    position:absolute;
+    pointer-events:none;
+}
+
+.gallery-heart{
+    color:#ffc7df;
+    font-size:34px;
+    animation:floatHeart 4s ease-in-out infinite;
+}
+
+.gallery-star{
+    color:white;
+    font-size:24px;
+    text-shadow:0 0 12px white;
+    animation:twinkle 2s ease-in-out infinite;
+}
+
+.heart-a{ top:120px; left:-40px; }
+.heart-b{ top:260px; right:-30px; }
+
+.star-a{ top:180px; left:40px; }
+.star-b{ top:340px; right:50px; }
+
+/* Animations */
+
+@keyframes floatPolaroid{
+    0%,100%{ transform:translateY(0px) rotate(-1deg); }
+    50%{ transform:translateY(-8px) rotate(1deg); }
+}
+
+@keyframes floatHeart{
+    0%,100%{ transform:translateY(0px); }
+    50%{ transform:translateY(-10px); }
+}
+
+@keyframes twinkle{
+    0%,100%{ opacity:.4; transform:scale(.8); }
+    50%{ opacity:1; transform:scale(1.3); }
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .gallery-title{
+        font-size:42px;
+    }
+
+    .polaroid-frame{
+        width:360px;
+        height:500px;
+    }
+
+    .polaroid-photo{
+        top:112px;
+        width:235px;
+        height:280px;
+    }
+
+    .gallery-btn{
+        width:58px;
+        height:58px;
+        font-size:26px;
+    }
+}
+.polaroid-photo{
+    position:absolute;
+    top:170px;
+    left:50%;
+    transform:translateX(-50%);
+    width:365px;
+    height:435px;
+    object-fit:cover;
+}
+.memory-label{
+    width:520px;
+    display:block;
+    margin:20px auto 35px;
+}
+.gallery{
+    position:relative;
+
+    width:1100px;
+    height:700px;
+
+    margin:auto;
+}
+
+.book{
+    position:absolute;
+
+    width:1000px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:1;
+}
+
+.polaroid{
+
+    z-index:5;
+}
+#photo{
+
+    position:absolute;
+
+    width:188px;
+    height:188px;
+
+    object-fit:cover;
+
+    left:42px;
+    top:33px;
+}
+.arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+    border:none;
+
+    background:#ffd8e9;
+
+    color:#d979a4;
+
+    font-size:38px;
+
+    cursor:pointer;
+
+    z-index:20;
+}
+
+.left{
+    left:20px;
+}
+
+.right{
+    right:20px;
+}
+
+.arrow:hover{
+
+    transform:translateY(-50%) scale(1.1);
+
+    background:#ffc5de;
+}
+
+.left{
+
+    left:40px;
+}
+
+.right{
+
+    right:40px;
+}
+.polaroid-left{
+    position:absolute;
+
+    width:250px;
+
+    left:230px;
+    top:145px;
+
+    z-index:5;
+}
+.polaroid-right{
+    position:absolute;
+
+    width:250px;
+
+    right:230px;
+    top:145px;
+
+    z-index:5;
+}
+.photo{
+    position:absolute;
+
+    width:163px;
+    height:205px;
+
+    object-fit:cover;
+
+    left:42px;
+    top:34px;
+
+    border:none;
+    box-shadow:none;
+}
