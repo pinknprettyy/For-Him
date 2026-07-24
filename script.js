@@ -1,45 +1,46 @@
 const photos = [
-"images/photo1.jpg",
-"images/photo2.jpg",
-"images/photo3.jpg",
-"images/photo4.jpg",
-"images/photo5.jpg"
-];
-
-const captions = [
-"Our first photo ♡",
-"Our favourite day ♡",
-"I love this one ✦",
-"Forever us ♡",
-"My favourite memory"
+    "images/photo1.jpg",
+    "images/photo2.jpg",
+    "images/photo3.jpg",
+    "images/photo4.jpg",
+    "images/photo5.jpg",
+    "images/photo6.jpg"
 ];
 
 let current = 0;
 
-function showPhoto(){
+function showPhotos(){
 
-document.getElementById("leftPhoto").src=photos[current];
+    document.getElementById("leftPhoto").src =
+        photos[current];
 
-document.getElementById("rightPhoto").src=photos[(current+1)%photos.length];
-
-document.getElementById("photoCaption").textContent=captions[current];
+    document.getElementById("rightPhoto").src =
+        photos[(current+1)%photos.length];
 
 }
 
 function nextPhoto(){
 
-current=(current+1)%photos.length;
+    current += 2;
 
-showPhoto();
+    if(current >= photos.length){
+        current = 0;
+    }
+
+    showPhotos();
 
 }
 
 function previousPhoto(){
 
-current=(current-1+photos.length)%photos.length;
+    current -= 2;
 
-showPhoto();
+    if(current < 0){
+        current = photos.length-2;
+    }
+
+    showPhotos();
 
 }
 
-showPhoto();
+showPhotos();
