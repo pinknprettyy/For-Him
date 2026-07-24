@@ -1391,13 +1391,6 @@ body.letters-page{
     transform:translate(-50%,-50%);
 }
 
-.scrap{
-
-    position:absolute;
-
-    width:250px;
-}
-
 .left-page{
     left:230px;
     top:150px;
