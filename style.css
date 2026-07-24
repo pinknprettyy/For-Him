@@ -1314,39 +1314,6 @@ body.letters-page{
     left:42px;
     top:33px;
 }
-.arrow{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:70px;
-    height:70px;
-
-    border-radius:50%;
-    border:none;
-
-    background:#ffd8e9;
-
-    color:#d979a4;
-
-    font-size:38px;
-
-    cursor:pointer;
-
-    z-index:20;
-}
-
-
-.arrow:hover{
-
-    transform:translateY(-50%) scale(1.1);
-
-    background:#ffc5de;
-}
-
 .polaroid-right{
 
     position:absolute;
@@ -1414,12 +1381,14 @@ body.letters-page{
 }
 
 .book{
+    position:absolute;
 
-    width:1100px;
+    width:1000px;   /* slightly smaller */
 
-    display:block;
+    left:50%;
+    top:42%;        /* move UP */
 
-    margin:auto;
+    transform:translate(-50%,-50%);
 }
 
 .scrap{
@@ -1430,16 +1399,14 @@ body.letters-page{
 }
 
 .left-page{
-    position:absolute;
-    left:210px;
-    top:210px;      /* LOWER */
+    left:230px;
+    top:150px;
     transform:rotate(-8deg);
 }
 
 .right-page{
-    position:absolute;
-    right:210px;
-    top:210px;      /* LOWER */
+    right:230px;
+    top:150px;
     transform:rotate(8deg);
 }
 
@@ -1488,45 +1455,31 @@ body.letters-page{
 }
 
 .arrow{
-
     position:absolute;
-
-    top:50%;
-
+    top:43%;
     transform:translateY(-50%);
-
-    width:70px;
-
-    height:70px;
-
+    width:75px;
+    height:75px;
     border:none;
-
     border-radius:50%;
-
-    background:#ffd7e7;
-
-    color:#d979a4;
-
-    font-size:38px;
-
+    background:#f8e3eb;
+    color:#ffcae2;
+    font-size:42px;
     cursor:pointer;
+    z-index:100;
+}
 
-    transition:.25s;
+.left{
+    left:85px;
+}
+
+.right{
+    right:85px;
 }
 
 .arrow:hover{
 
     transform:translateY(-50%) scale(1.1);
-}
-
-.left{
-
-    left:20px;
-}
-
-.right{
-
-    right:20px;
 }
 
 .tape{
@@ -1549,24 +1502,18 @@ body.letters-page{
 
     opacity:.85;
 }
-
 .sticker{
-
     position:absolute;
-
-    width:60px;
+    width:95px;
+    z-index:20;
 }
 
 .flower{
-
-    left:-35px;
-
-    bottom:-20px;
+    left:-50px;
+    bottom:-35px;
 }
 
 .bow{
-
-    right:-30px;
-
-    top:-15px;
+    right:-45px;
+    top:-25px;
 }
