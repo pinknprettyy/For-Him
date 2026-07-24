@@ -1297,33 +1297,6 @@ body.letters-page{
     display:block;
     margin:20px auto 35px;
 }
-.gallery{
-
-    position:relative;
-
-    width:1200px;
-
-    height:760px;
-
-    margin:60px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.book{
-
-    width:1050px;
-
-    display:block;
-
-    margin:auto;
-
-}
 
 .polaroid{
 
@@ -1374,28 +1347,6 @@ body.letters-page{
     background:#ffc5de;
 }
 
-.left{
-
-    left:40px;
-}
-
-.right{
-
-    right:40px;
-}
-.polaroid-left{
-
-    position:absolute;
-
-    left:240px;
-
-    top:140px;
-
-    width:210px;
-
-    transform:rotate(-8deg);
-
-}
 .polaroid-right{
 
     position:absolute;
@@ -1450,4 +1401,172 @@ body.letters-page{
 
     text-shadow:
         0 0 8px rgba(255,180,220,.4);
+}
+.gallery{
+
+    position:relative;
+
+    width:1200px;
+
+    height:760px;
+
+    margin:0 auto;
+}
+
+.book{
+
+    width:1100px;
+
+    display:block;
+
+    margin:auto;
+}
+
+.scrap{
+
+    position:absolute;
+
+    width:250px;
+}
+
+.left-page{
+    position:absolute;
+    left:210px;
+    top:210px;      /* LOWER */
+    transform:rotate(-8deg);
+}
+
+.right-page{
+    position:absolute;
+    right:210px;
+    top:210px;      /* LOWER */
+    transform:rotate(8deg);
+}
+
+.scrap{
+    position:absolute;
+    width:310px;    /* BIGGER */
+
+}
+.scrap-photo{
+
+    width:280px;
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#fff;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+.scrap-photo:hover{
+
+    transform:scale(1.04) rotate(-2deg);
+
+}
+
+.scrap-text{
+
+    margin-top:15px;
+
+    font-family:"Gojiberry";
+
+    color:#d97ca6;
+
+    font-size:18px;
+
+    text-align:center;
+
+    line-height:1.5;
+}
+
+.arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffd7e7;
+
+    color:#d979a4;
+
+    font-size:38px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.arrow:hover{
+
+    transform:translateY(-50%) scale(1.1);
+}
+
+.left{
+
+    left:20px;
+}
+
+.right{
+
+    right:20px;
+}
+
+.tape{
+
+    position:absolute;
+
+    width:90px;
+
+    height:30px;
+
+    background:rgba(255,240,248,.85);
+
+    top:-12px;
+
+    left:65px;
+
+    transform:rotate(-8deg);
+
+    border-radius:4px;
+
+    opacity:.85;
+}
+
+.sticker{
+
+    position:absolute;
+
+    width:60px;
+}
+
+.flower{
+
+    left:-35px;
+
+    bottom:-20px;
+}
+
+.bow{
+
+    right:-30px;
+
+    top:-15px;
 }

@@ -1,10 +1,10 @@
 const photos = [
-    "images/photo1.jpg",
-    "images/photo2.jpg",
-    "images/photo3.jpg",
-    "images/photo4.jpg",
-    "images/photo5.jpg",
-    "images/photo6.jpg"
+"images/photo1.png",
+"images/photo2.png",
+"images/photo3.png",
+"images/photo4.png",
+"images/photo5.png",
+"images/photo6.png"
 ];
 
 let current = 0;
@@ -19,7 +19,7 @@ function showPhotos(){
 
 }
 
-function nextPhoto(){
+function nextPage(){
 
     current += 2;
 
@@ -28,10 +28,9 @@ function nextPhoto(){
     }
 
     showPhotos();
-
 }
 
-function previousPhoto(){
+function previousPage(){
 
     current -= 2;
 
@@ -40,7 +39,6 @@ function previousPhoto(){
     }
 
     showPhotos();
-
 }
 
 showPhotos();

@@ -11,81 +11,45 @@
 
 <div class="gallery-wrapper">
 
-    <!-- Title -->
-<img src="images/ourmemories.png" class="memory-label">
+    <img src="images/ourmemories.png" class="memory-label">
 
-    <!-- Floating decorations -->
-    <div class="gallery-heart heart-a">♡</div>
-    <div class="gallery-heart heart-b">♡</div>
-    <div class="gallery-star star-a">✦</div>
-    <div class="gallery-star star-b">✦</div>
+    <div class="gallery">
 
-    <!-- Polaroid frame -->
-    <div class="polaroid-frame">
+        <img src="images/open-book.png" class="book">
 
-<div class="gallery">
+        <!-- LEFT PAGE -->
 
-<img src="images/open-book.png" class="book">
+        <div class="scrap left-page">
 
-<div class="polaroid-left">
+            <div class="tape tape-left"></div>
 
-<img src="images/polaroid.png">
+            <img id="leftPhoto" class="scrap-photo">
 
-<img id="leftPhoto" class="photo">
+            <p id="leftText" class="scrap-text"></p>
+
+            <img src="images/flower.png" class="sticker flower">
+
+        </div>
+        <!-- RIGHT PAGE -->
+
+        <div class="scrap right-page">
+
+            <div class="tape tape-right"></div>
+
+            <img id="rightPhoto" class="scrap-photo">
+
+            <p id="rightText" class="scrap-text"></p>
+
+            <img src="images/bow.png" class="sticker bow">
+
+        </div>
+
+<button class="arrow left" onclick="previousPage()">❮</button>
+<button class="arrow right" onclick="nextPage()">❯</button>
 
 </div>
 
-<div class="polaroid-right">
+<script src="gallery.js"></script>
 
-<img src="images/polaroid.png">
-
-<img id="rightPhoto" class="photo">
-
-</div>
-
-<button class="arrow left" onclick="previousPhoto()">❮</button>
-
-<button class="arrow right" onclick="nextPhoto()">❯</button>
-
-</div>
-
-<script>
-const photos = [
-    {
-        src: 'images/photo1.jpg',
-
-    },
-    {
-        src: 'images/photo2.jpg',
-
-    },
-    {
-        src: 'images/photo3.jpg',
-
-    },
-    {
-        src: 'images/photo4.jpg',
-
-    }
-];
-
-let current = 0;
-
-function showPhoto(index){
-    document.getElementById('galleryPhoto').src = photos[index].src;
-    document.getElementById('photoCaption').textContent = photos[index].caption;
-}
-
-function nextPhoto(){
-    current = (current + 1) % photos.length;
-    showPhoto(current);
-}
-
-function prevPhoto(){
-    current = (current - 1 + photos.length) % photos.length;
-    showPhoto(current);
-}
-</script>
-<script src="script.js"></script>
 </body>
 </html>
